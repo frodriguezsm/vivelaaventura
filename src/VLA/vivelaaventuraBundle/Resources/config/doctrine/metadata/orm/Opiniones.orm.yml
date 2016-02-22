@@ -1,0 +1,36 @@
+Opiniones:
+    type: entity
+    table: opiniones
+    indexes:
+        id_usuario:
+            columns:
+                - id_usuario
+    id:
+        idOpiniones:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_opiniones
+            generator:
+                strategy: IDENTITY
+    fields:
+        opinion:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+    manyToOne:
+        idUsuario:
+            targetEntity: Usuarios
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_usuario:
+                    referencedColumnName: id_usuario
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

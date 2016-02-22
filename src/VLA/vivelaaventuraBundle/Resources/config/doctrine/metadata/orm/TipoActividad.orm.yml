@@ -1,0 +1,57 @@
+TipoActividad:
+    type: entity
+    table: tipo_actividad
+    id:
+        idTipoActividad:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_tipo_actividad
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        imagen:
+            type: blob
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        descripcion:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        requisitos:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+    manyToMany:
+        idEventos:
+            targetEntity: Eventos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: idTipoActividad
+            joinTable:
+                name: actividad_eventos
+                joinColumns:
+                    -
+                        name: id_tipo_actividad
+                        referencedColumnName: id_tipo_actividad
+                inverseJoinColumns:
+                    -
+                        name: id_eventos
+                        referencedColumnName: id_eventos
+            orderBy: null
+    lifecycleCallbacks: {  }

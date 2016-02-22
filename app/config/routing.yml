@@ -1,0 +1,4 @@
+vivelaaventura:
+    resource: "@vivelaaventuraBundle/Resources/config/routing.yml"
+    prefix:   vivelaaventura/
+

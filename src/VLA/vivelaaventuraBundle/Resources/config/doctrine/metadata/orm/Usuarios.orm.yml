@@ -1,0 +1,37 @@
+Usuarios:
+    type: entity
+    table: usuarios
+    uniqueConstraints:
+        usuario:
+            columns:
+                - usuario
+    id:
+        idUsuario:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_usuario
+            generator:
+                strategy: IDENTITY
+    fields:
+        usuario:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        password:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        rol:
+            type: string
+            nullable: false
+            length: 5
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

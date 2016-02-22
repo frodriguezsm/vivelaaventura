@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<div class="container">
+	{% block content %}
+			<h1>Estas son las caracter&iacute;sticas generales de la actividad de senderismo</h1>
+			<table>
+					<tr>
+						<td>Nombre de la actividad</td>
+						<td></td><td></td>
+						<td>Imagen de la actividad</td>
+						<td></td><td></td>
+						<td>Descripción de la actividad</td>
+						<td></td><td></td>
+						<td>Requisitos de la actividad</td>
+					</tr>
+					<tr>
+						<td>{{ actividad.nombre }}</td>
+						<td></td><td></td>
+						<td>{{ actividad.imagen }}</td>
+						<td></td><td></td>
+						<td>{{ actividad.descripcion }}</td>
+						<td></td><td></td>
+						<td>{{ actividad.requisitos }}</td>
+					</tr>
+			</table>
+<a href="{{ path ('vivelaaventura_eventos', {id_actividad:actividad.idTipoActividad} ) }}">Eventos</a>
+	{% endblock %}
+</div>

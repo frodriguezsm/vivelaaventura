@@ -1,0 +1,86 @@
+{% extends '::base.html.twig' %}
+{% block header %}
+{% include "vivelaaventuraBundle:Default:header.html.twig" %}
+{% endblock %}
+
+{% block content %}
+
+					
+		<div class="row">
+			{% for TipoActividad in actividad %}
+				<div class="col-md-4">
+					<a href="{{path ('vivelaaventura_actividad', {id_actividad:TipoActividad.idTipoActividad} ) }}" class="thumbnail">
+			      	<img data-src="{{TipoActividad.imagen}}" class="{{TipoActividad.nombre}}" alt="{{TipoActividad.idTipoActividad}}"></a>
+				</div>{# Acaba la divisi�n de la columna #}
+			{% endfor %}{# Acaba el for #}
+		</div>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	{#
+		<div class="row">
+				<div class="col-md-4">
+					<a href="{{path ('vivelaaventura_actividad', {id_actividad:1} ) }}" class="thumbnail">
+			      	<img data-src="Senderismo" class="activi" alt="Senderismo">
+			     	 </a>
+		     	 </div>
+			  	<div class="col-md-4">
+				  	<a href="{{path ('vivelaaventura_actividad', {id_actividad:2} ) }}" class="thumbnail">
+			      	<img data-src="Rafting" class="activi" alt="Rafting">
+			    	</a>
+		   		</div>
+			  	<div class="col-md-4">
+			  		<a href="{{path ('vivelaaventura_actividad', {id_actividad:3} ) }}" class="thumbnail">
+			      	<img data-src="Piragüismo" class="activi" alt="Piragüismo">
+			    	</a>
+				</div>
+				<div class="col-md-4">
+					<a href="{{path ('vivelaaventura_actividad', {id_actividad:4} ) }}" class="thumbnail">
+			      	<img data-src="Barranquismo" class="activi" alt="Barranquismo">
+			     	 </a>
+		     	 </div>
+			  	<div class="col-md-4">
+				  	<a href="{{path ('vivelaaventura_actividad', {id_actividad:5} ) }}" class="thumbnail">
+			      	<img data-src="Hidro speed" class="activi" alt="Hidro speed">
+			    	</a>
+		   		</div>
+			  	<div class="col-md-4">
+			  		<a href="{{path ('vivelaaventura_actividad', {id_actividad:6} ) }}" class="thumbnail">
+			      	<img data-src="Ruta 4X4" class="activi" alt="Ruta 4X4">
+			    	</a>
+				</div>
+		 </div>
+	#}
+</div>
+
+{% endblock %}

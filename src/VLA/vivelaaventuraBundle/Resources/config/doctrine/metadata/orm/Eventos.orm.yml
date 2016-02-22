@@ -1,0 +1,51 @@
+Eventos:
+    type: entity
+    table: eventos
+    id:
+        idEventos:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_eventos
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombreEvento:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: nombre_evento
+        imagen:
+            type: blob
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        descripcionEvento:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: descripcion_evento
+        requisitosEvento:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+            column: requisitos_evento
+    manyToMany:
+        idTipoActividad:
+            targetEntity: TipoActividad
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idEventos
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

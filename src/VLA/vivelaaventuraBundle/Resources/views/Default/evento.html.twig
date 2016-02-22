@@ -1,0 +1,22 @@
+{% block body %}
+<h1>Aquí saldrá la lista de eventos de la actividad seleccionada</h1>
+<table id="eventos_actividad">
+	<tr>
+		<td>Imagen</td>
+		<td>Nombre</td>
+		<td>Descripción</td>
+		<td>Requisitos</td>
+	</tr>
+	<tr>
+		<td>{{ eventos.nombre }}</td>
+		<td></td><td></td>
+		<td>{{ eventos.imagen }}</td>
+		<td></td><td></td>
+		<td>{{ eventos.descripcion }}</td>
+		<td></td><td></td>
+		<td>{{ eventos.requisitos }}</td>
+	</tr>
+</table>
+<a href="{{path ('vivelaaventura_actividad', {id_actividad:TipoActividad.id_tipoActividad} ) }}">Actividad</a>
+<div="volver"><a href="{{path ('vivelaaventura_actividades') }}">Actividades</a></div>
+{% endblock %}

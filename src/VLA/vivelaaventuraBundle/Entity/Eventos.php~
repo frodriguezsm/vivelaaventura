@@ -1,0 +1,68 @@
+<?php
+
+namespace VLA\vivelaaventuraBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Eventos
+ *
+ * @ORM\Table(name="eventos")
+ * @ORM\Entity
+ */
+class Eventos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_eventos", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idEventos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre_evento", type="string", length=50, nullable=false)
+     */
+    private $nombreEvento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="imagen", type="blob", length=65535, nullable=false)
+     */
+    private $imagen;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion_evento", type="text", length=65535, nullable=false)
+     */
+    private $descripcionEvento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="requisitos_evento", type="string", length=200, nullable=false)
+     */
+    private $requisitosEvento;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="TipoActividad", mappedBy="idEventos")
+     */
+    private $idTipoActividad;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idTipoActividad = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+

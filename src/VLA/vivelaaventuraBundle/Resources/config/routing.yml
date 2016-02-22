@@ -1,0 +1,35 @@
+vivelaaventura_home:
+    path:     /
+    defaults: { _controller: vivelaaventuraBundle:Default:actividades }
+    
+vivelaaventura_actividades:
+    path:     /actividades
+    defaults: { _controller: vivelaaventuraBundle:Default:actividades }
+    
+vivelaaventura_actividad:
+    path:     /actividad/{id_actividad}
+    defaults: { _controller: vivelaaventuraBundle:Default:actividad }
+    
+vivelaaventura_evento:
+    path:     /actividad/{id_actividad}/evento/{id_evento}
+    defaults: { _controller: vivelaaventuraBundle:Default:evento }
+    
+vivelaaventura_eventos:
+    path:     /evento/{id_actividad}
+    defaults: { _controller: vivelaaventuraBundle:Default:evento }
+    
+vivelaaventura_quienessomos:
+    path:     /quienes_somos
+    defaults: { _controller: vivelaaventuraBundle:Default:quienesSomos }
+    
+vivelaaventura_contacto:
+    path:     /contacto
+    defaults: { _controller: vivelaaventuraBundle:Default:contacto }
+    
+vivelaaventura_login:
+    path:     /login
+    defaults: { _controller: vivelaaventuraBundle:Default:login }
+    
+vivelaaventura_admin:
+    path:     /admin
+    defaults: { _controller: vivelaaventuraBundle:Default:admin }
