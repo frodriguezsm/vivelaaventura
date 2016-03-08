@@ -1,7 +1,14 @@
-{% extends '::base.html.twig' %}
+{% extends 'vivelaaventuraBundle::Default/base.html.twig' %}
+
 {% block title %}
 esto es la parte privada
 {% endblock %}
-{% block body %}
+
+{% block content %}
 esto es la parte privada de la aplicacion
+
+<br><br>
+<a id="salir" href="{{ url('vivelaaventura__logout') }}" title="Salir">Salir</a>
+
+
 {% endblock %}

@@ -18,13 +18,15 @@
 					<tr>
 						<td>{{ actividad.nombre }}</td>
 						<td></td><td></td>
-						<td>{{ actividad.imagen }}</td>
+						<td><img src="data:image/.jpg;base64,{{actividad.imagen}}"</td>
 						<td></td><td></td>
 						<td>{{ actividad.descripcion }}</td>
 						<td></td><td></td>
 						<td>{{ actividad.requisitos }}</td>
 					</tr>
 			</table>
-<a href="{{ path ('vivelaaventura_eventos', {id_actividad:actividad.idTipoActividad} ) }}">Eventos</a>
+			
+			
+
 	{% endblock %}
 </div>

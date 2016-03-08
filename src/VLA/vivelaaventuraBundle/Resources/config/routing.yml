@@ -1,3 +1,28 @@
+vivelaaventura_login:
+    path:     /admin
+    defaults: { _controller: vivelaaventuraBundle:Security:login }
+
+vivelaaventura_login_barra:
+    path:     /admin/
+    defaults: { _controller: vivelaaventuraBundle:Security:login }
+
+vivelaaventura_login_check:
+    path:     /admin/login_check
+    defaults: { _controller: vivelaaventuraBundle:Security:check }
+
+vivelaaventura__logout:
+    path:     /admin/logout
+    defaults: { _controller: vivelaaventuraBundle:Security:logout }
+
+vivelaaventura_admin_gestion:
+    path:     /admin/gestion
+    defaults: { _controller: vivelaaventuraBundle:Security:admin }
+    
+    
+    
+
+
+
 vivelaaventura_home:
     path:     /
     defaults: { _controller: vivelaaventuraBundle:Default:actividades }
@@ -13,11 +38,7 @@ vivelaaventura_actividad:
 vivelaaventura_evento:
     path:     /actividad/{id_actividad}/evento/{id_evento}
     defaults: { _controller: vivelaaventuraBundle:Default:evento }
-    
-vivelaaventura_eventos:
-    path:     /evento/{id_actividad}
-    defaults: { _controller: vivelaaventuraBundle:Default:evento }
-    
+   
 vivelaaventura_quienessomos:
     path:     /quienes_somos
     defaults: { _controller: vivelaaventuraBundle:Default:quienesSomos }
@@ -26,10 +47,58 @@ vivelaaventura_contacto:
     path:     /contacto
     defaults: { _controller: vivelaaventuraBundle:Default:contacto }
     
-vivelaaventura_login:
-    path:     /login
+____vivelaaventura_login:
+    path:     /____login
     defaults: { _controller: vivelaaventuraBundle:Default:login }
     
-vivelaaventura_admin:
-    path:     /admin
+____vivelaaventura_admin:
+    path:     /____admin
     defaults: { _controller: vivelaaventuraBundle:Default:admin }
+
+new_actividad:
+    path:     /new
+    defaults: { _controller: vivelaaventuraBundle:TipoActividad:newActividad }
+
+create_actividad:
+    path:     /create
+    defaults: { _controller: vivelaaventuraBundle:TipoActividad:createActividad }
+
+edit_actividad:
+    path:     /{id}/edit/
+    defaults: { _controller: vivelaaventuraBundle:TipoActividad:editActividad }
+
+update_actividad:
+    path:     /{id}/update
+    defaults: { _controller: vivelaaventuraBundle:TipoActividad:updateActividad }
+
+delete_actividad:
+    path:     /tipoActividad/{id}/delete
+    defaults: { _controller: vivelaaventuraBundle:TipoActividad:deleteActividad }
+
+list_actividad:
+    path:     /list
+    defaults: { _controller: vivelaaventuraBundle:TipoActividad:listActividad }
+
+new_evento:
+    path:     /newEvento
+    defaults: { _controller: vivelaaventuraBundle:Eventos:newEvento }
+
+crete_evento:
+    path:     /creteEvento
+    defaults: { _controller: vivelaaventuraBundle:Eventos:creteEvento }
+
+edit_evento:
+    path:     /{id}/editEvento
+    defaults: { _controller: vivelaaventuraBundle:Eventos:editEvento }
+
+update_evento:
+    path:     /{id}/updateEvento
+    defaults: { _controller: vivelaaventuraBundle:Eventos:updateEvento }
+
+delete_evento:
+    path:     /{id}/deleteEvento
+    defaults: { _controller: vivelaaventuraBundle:Eventos:deleteEvento }
+
+listar_evento:
+    path:     /listarEvento
+    defaults: { _controller: vivelaaventuraBundle:Eventos:listarEvento }

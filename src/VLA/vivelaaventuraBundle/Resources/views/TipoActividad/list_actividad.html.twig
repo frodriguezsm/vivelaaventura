@@ -1,7 +1,26 @@
-{% extends "::base.html.twig" %}
-
-{% block title %}vivelaaventuraBundle:TipoActividad:listActividad{% endblock %}
-
-{% block body %}
-<h1>Welcome to the TipoActividad:listActividad page</h1>
+{% block content %}
+	{% block body %}
+		<h1>Estas son las actividades que tenemos en la base de datos</h1>
+		<table>
+			<tr>
+				<td>Imagen de la azctividad</td>
+				<td>Nombre de la actividad</td>
+				<td>Descripción de la actividad</td>
+				<td>Requisitod de la actividad</td>
+			</tr>
+			{% for TipoActividad in actividades %}
+				<tr>
+					<td>{{TipoActividad.imagen}}</td>
+					<td>{{TipoActividad.nombre}}</td>
+					<td>{{TipoActividad.descripcion}}</td>
+					<td>{{TipoActividad.requisitos}}</td>
+					<td>
+						<a href="{{path ('edit_actividad', {id:TipoActividad.idTipoActividad}) }}">[Edit]</a>
+						<a href="{{path ('delete_actividad', {id:TipoActividad.idTipoActividad})}}">[Delete]</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</table>
+		<a href="{{path ('new_actividad') }}">Nueva actividad</a>
+	{% endblock %}
 {% endblock %}

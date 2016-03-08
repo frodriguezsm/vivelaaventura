@@ -1,4 +1,5 @@
-{% extends '::base.html.twig' %}
+{% extends 'vivelaaventuraBundle::Default/base.html.twig' %}
+
 {% block header %}
 {% include "vivelaaventuraBundle:Default:header.html.twig" %}
 {% endblock %}
@@ -10,37 +11,10 @@
 			{% for TipoActividad in actividad %}
 				<div class="col-md-4">
 					<a href="{{path ('vivelaaventura_actividad', {id_actividad:TipoActividad.idTipoActividad} ) }}" class="thumbnail">
-			      	<img data-src="{{TipoActividad.imagen}}" class="{{TipoActividad.nombre}}" alt="{{TipoActividad.idTipoActividad}}"></a>
+			      	<img src="{{TipoActividad.imagen}}" class="{{TipoActividad.nombre}}" alt="{{TipoActividad.imagen}}"></a>
 				</div>{# Acaba la división de la columna #}
 			{% endfor %}{# Acaba el for #}
 		</div>	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -20,7 +20,7 @@ class DefaultController extends Controller
     {	
     	$actividad = $this->get('Doctrine')->getRepository('vivelaaventuraBundle:TipoActividad')->find($id_actividad);
 
-    	//$this->mpr($actividad, 'actividad');
+    	$this->mpr($actividad->getImagen(), 'actividad');
     	
         return $this->render('vivelaaventuraBundle:Default:actividad.html.twig', 
         					array('actividad' => $actividad));

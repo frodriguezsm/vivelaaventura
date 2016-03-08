@@ -1,27 +1,23 @@
-{% extends '::base.html.twig' %}
+{% extends 'vivelaaventuraBundle::Default/base.html.twig' %}
+
 {% block title %}
 Login
 {% endblock %}
-{% block body %}
 
-
+{% block content %}
 
 <section>
-        {% if error %}
-        <div id="msg_error">Usuario o contraseña incorrectos</div>
-        {% endif %}
+    {% if error %}
+    <div id="msg_error">Usuario o contraseña incorrectos</div>
+    {% endif %}
 
-        <form id="login" name="login" class="ac-form" method="post" action="{{ url('vivelaaventura_login_check') }}">
-            <!--label>Usuario</label-->
-            <input type="text" id="username" name="_username" autofocus required placeholder="Usuario"/>
-            <!--label>Contraseña</label-->
-            <input type="password" id="password" name="_password" required placeholder="Contraseña"/>
-            <input type="submit" id="aceptar" name="aceptar" value="Aceptar" />
-        </form>
-    </section>
-
-
-
-
+    <form id="login" name="login" class="ac-form" method="post" action="{{ url('vivelaaventura_login_check') }}">
+        <!--label>Usuario</label-->
+        <input type="text" id="username" name="_username" autofocus required placeholder="Usuario"/>
+        <!--label>Contraseña</label-->
+        <input type="password" id="password" name="_password" required placeholder="Contraseña"/>
+        <input type="submit" id="aceptar" name="aceptar" value="Aceptar" />
+    </form>
+</section>
 
 {% endblock %}

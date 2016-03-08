@@ -29,7 +29,7 @@ class TipoActividad
     private $nombre;
 
     /**
-     * @var string
+     * @var blob
      *
      * @ORM\Column(name="imagen", type="blob", length=65535, nullable=false)
      */
@@ -124,7 +124,7 @@ class TipoActividad
     /**
      * Get imagen
      *
-     * @return string
+     * @return blob
      */
     public function getImagen()
     {
@@ -211,4 +211,5 @@ class TipoActividad
     {
         return $this->idEventos;
     }
+    
 }

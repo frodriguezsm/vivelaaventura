@@ -1,0 +1,26 @@
+{% block content %}
+	{% block body %}
+		<h1>Estas son las actividades que tenemos en la base de datos</h1>
+		<table>
+			<tr>
+				<td>Imagen del evento</td>
+				<td>Nombre de la actividad</td>
+				<td>Descripción de la actividad</td>
+				<td>Requisitod de la actividad</td>
+			</tr>
+			{% for Eventos in eventos %}
+				<tr>
+					<td>{{Eventos.imagen}}</td>
+					<td>{{Eventos.nombreEvento}}</td>
+					<td>{{Eventos.descripcionEvento}}</td>
+					<td>{{Eventos.requisitosEvento}}</td>
+					<td>
+						<a href="{{path ('edit_evento', {id:Eventos.idEventos}) }}">[Edit]</a>
+						<a href="{{path ('delete_evento', {id:Eventos.idEventos})}}">[Delete]</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</table>
+		<a href="{{path ('new_evento') }}">Nuevo evento</a>
+	{% endblock %}
+{% endblock %}

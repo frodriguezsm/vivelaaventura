@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Vive la aventura{% endblock %}</title>
+        
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+ 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+ 		<link type="text/css" rel="stylesheet" href="{{ asset('bundles/VLA/css/styles.css') }}">
+ 		
+ 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+ 		
+        {% block stylesheets %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+        
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    
+    <body>
+	    <header>
+	    	{% block header %}{% endblock %}
+	    </header>
+		<div class="container">
+	    	{% block content %}{% endblock %}
+	    </div>
+	    <footer>
+	    	{% block footer %}{% endblock %}
+	    </footer>	
+    </body>
+</html>
+

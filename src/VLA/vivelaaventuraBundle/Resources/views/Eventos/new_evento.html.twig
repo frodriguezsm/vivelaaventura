@@ -2,16 +2,15 @@
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-{% block title %}vivelaaventuraBundle:TipoActividad:newActividad{% endblock %}
 
 <div class="container">
 	{% block content %}
-	<h1>Éste es el formulario para agregar actividades a la base de datos</h1>
-	
-		<form action= "{{action}}" method= "post" >
+	<h1>Éste es el formulario para agregar eventos a la base de datos</h1>
+		<form action= "{{action}}" method= "post">
 			{{form_widget(form)}}
 			<input type="submit" value="create">
 		</form>
-	    
+	   
 	{% endblock %}
 </div>
+
