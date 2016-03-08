@@ -1,0 +1,7 @@
+sudo /Proyectos/composer.phar create-project symfony/framework-standard-edition /Proyectos/ARoucher "2.8.*"
+
+sudo php app/console generate:bundle --namespace=AR/alejandroBundle --format=yml
+
+php app/console doctrine:mapping:convert yml ./src/ID/DemoBundle/Resources/config/doctrine/metadata/orm --from-database --force
+php app/console doctrine:mapping:import TestBundle annotation
+php app/console doctrine:generate:entities TestBundle
